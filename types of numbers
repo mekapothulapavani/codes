@@ -1,0 +1,253 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMMqjFBO6rheeeU1Cuj6U7Q",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mekapothulapavani/codes/blob/main/types%20of%20numbers\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**ATMOSPHERIC** **NUMBER**"
+      ],
+      "metadata": {
+        "id": "kfeI1msQ2yZ3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4zc-mh_42vjd",
+        "outputId": "00c6d2d4-9997-4de9-e43d-5a58ebcae81f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n",
+            "it is a atmospheric number\n"
+          ]
+        }
+      ],
+      "source": [
+        "def atmospheric(n):\n",
+        "  a=n*n\n",
+        "  b=a%10\n",
+        "  if b==n:\n",
+        "    return \"it is a atmospheric number\"\n",
+        "  else:\n",
+        "    return \"not a atmospheric number\"\n",
+        "n=int(input())\n",
+        "print(atmospheric(n))\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**PERFECT** **NUMBER**"
+      ],
+      "metadata": {
+        "id": "i8B91mWF4crn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def perfect(n):\n",
+        "  sum=0\n",
+        "  for i in range(1,n):\n",
+        "    if n%i==0:\n",
+        "       sum+=i\n",
+        "  if sum==n:\n",
+        "    return \"it is perfect\"\n",
+        "  else:\n",
+        "    return \"it is not a perfect number\"\n",
+        "n=int(input())\n",
+        "print(perfect(n))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lB1TYBVt4cJo",
+        "outputId": "3697ee38-bdec-4ca2-e22e-5397b59d0152"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "28\n",
+            "it is perfect\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**ABUNDANT** **NUMBER**"
+      ],
+      "metadata": {
+        "id": "MeV6q_J85vpC"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def abundant(n):\n",
+        "  sum=0\n",
+        "  for i in range(1,n):\n",
+        "    if n%i==0:\n",
+        "       sum+=i\n",
+        "  if sum>n:\n",
+        "    return \"it is abundant number\"\n",
+        "  else:\n",
+        "    return \"it is not a abundant number\"\n",
+        "n=int(input())\n",
+        "print(abundant(n))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7qGjZvNF55Xd",
+        "outputId": "5e9d349f-320e-4411-b6cb-3fe89137e419"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "12\n",
+            "it is abundant number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**FRIENDLY** **PAIR**"
+      ],
+      "metadata": {
+        "id": "GCI0_jVm6cJD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def friendlypair(n,p):\n",
+        "  sum=0\n",
+        "  sum1=0\n",
+        "  for i in range(1,n):\n",
+        "    if n%i==0:\n",
+        "      sum+=i\n",
+        "      a=sum/n\n",
+        "  for j in range(1,p):\n",
+        "    if p%j==0:\n",
+        "      sum1+=j\n",
+        "      b=sum1/p\n",
+        "  if a==b:\n",
+        "    return \"friendly pair\"\n",
+        "  else:\n",
+        "    return \"not a friendly pair\"\n",
+        "n=int(input())\n",
+        "p=int(input())\n",
+        "print(friendlypair(n,p))\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AaQH9uFH6g8i",
+        "outputId": "890839ca-357e-45c7-c11a-8e3ee5b96c84"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "6\n",
+            "28\n",
+            "friendly pair\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**HARSHAD** **NUMBER**"
+      ],
+      "metadata": {
+        "id": "_LKmlV1p9VQA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def harshad(n):\n",
+        "  sum=0\n",
+        "  while n>0:\n",
+        "    a=n%10\n",
+        "    sum=sum+a\n",
+        "    n=n//10\n",
+        "  if n%sum==0:\n",
+        "    return \"harshad number\"\n",
+        "  else:\n",
+        "    return \"not a harshad number\"\n",
+        "n=int(input())\n",
+        "print(harshad(n))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0bRV5GFR9pBp",
+        "outputId": "a44a45ac-9ac8-42a7-93a4-70b32d8ebe8c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "35\n",
+            "harshad number\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
